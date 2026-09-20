@@ -1,0 +1,9 @@
+{
+  "event_id": "092108-016-sample-001",
+  "event_type": "INGREDIENT_MAPPED",
+  "aggregate_type": "food_component",
+  "aggregate_id": "citrus_medication_guidance-001",
+  "occurred_at": "2026-09-20T18:00:00+08:00",
+  "version": 1,
+  "summary": "登记柑橘食药提示发布的首条领域记录"
+}
