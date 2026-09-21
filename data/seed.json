@@ -1,0 +1,267 @@
+{
+  "_comment": "联调示例数据；文献为示例引文（verified=false），正式发布前须由审校人核实。",
+  "components": [
+    {
+      "component_id": "furanocoumarin",
+      "name": "呋喃香豆素类（佛手柑素等）",
+      "mechanism": "不可逆抑制肠道 CYP3A4，并可能抑制 OATP1A2 转运体"
+    },
+    {
+      "component_id": "naringin",
+      "name": "柚皮苷",
+      "mechanism": "体外研究提示可影响 OATP 转运体"
+    }
+  ],
+  "exposures": [
+    {
+      "exposure_id": "grapefruit-juice",
+      "variety": "西柚",
+      "form": "果汁",
+      "component_ids": ["furanocoumarin", "naringin"],
+      "variety_aliases": ["葡萄柚"],
+      "form_aliases": ["西柚汁", "鲜榨果汁"]
+    },
+    {
+      "exposure_id": "grapefruit-fresh",
+      "variety": "西柚",
+      "form": "鲜果",
+      "component_ids": ["furanocoumarin", "naringin"],
+      "variety_aliases": ["葡萄柚"],
+      "form_aliases": ["鲜果", "果肉"]
+    },
+    {
+      "exposure_id": "pomelo-fresh",
+      "variety": "柚子",
+      "form": "鲜果",
+      "component_ids": ["furanocoumarin"],
+      "note": "呋喃香豆素含量通常低于西柚，品种间差异大",
+      "variety_aliases": ["文旦", "沙田柚"],
+      "form_aliases": ["鲜果", "果肉"]
+    },
+    {
+      "exposure_id": "sweet-orange-juice",
+      "variety": "甜橙",
+      "form": "果汁",
+      "component_ids": [],
+      "note": "普通甜橙基本不含呋喃香豆素",
+      "variety_aliases": ["脐橙", "普通橙子"],
+      "form_aliases": ["橙汁", "果汁"]
+    },
+    {
+      "exposure_id": "sweet-orange-fresh",
+      "variety": "甜橙",
+      "form": "鲜果",
+      "component_ids": [],
+      "variety_aliases": ["脐橙", "普通橙子"],
+      "form_aliases": ["鲜果", "果肉"]
+    },
+    {
+      "exposure_id": "grapefruit-flavor-drink",
+      "variety": "西柚味饮料",
+      "form": "调配饮料",
+      "component_ids": [],
+      "note": "香精调配、不含果汁，一般无相互作用顾虑",
+      "variety_aliases": ["西柚味汽水"],
+      "form_aliases": ["香精饮料", "汽水"]
+    }
+  ],
+  "ingredients": [
+    {
+      "ingredient_id": "simvastatin",
+      "generic_name": "辛伐他汀",
+      "aliases": ["舒降之", "辛可"],
+      "pathways": ["CYP3A4"]
+    },
+    {
+      "ingredient_id": "atorvastatin",
+      "generic_name": "阿托伐他汀",
+      "aliases": ["立普妥", "阿乐"],
+      "pathways": ["CYP3A4"]
+    },
+    {
+      "ingredient_id": "ezetimibe",
+      "generic_name": "依折麦布",
+      "aliases": ["益适纯"],
+      "pathways": ["UGT"]
+    },
+    {
+      "ingredient_id": "felodipine",
+      "generic_name": "非洛地平",
+      "aliases": ["波依定"],
+      "pathways": ["CYP3A4"]
+    },
+    {
+      "ingredient_id": "amlodipine",
+      "generic_name": "氨氯地平",
+      "aliases": ["络活喜", "安内真"],
+      "pathways": ["CYP3A4"]
+    },
+    {
+      "ingredient_id": "fexofenadine",
+      "generic_name": "非索非那定",
+      "aliases": ["阿特拉"],
+      "pathways": ["OATP1A2", "P-gp"]
+    }
+  ],
+  "products": [
+    {
+      "product_name": "葆至能",
+      "formula_version": 1,
+      "ingredient_ids": ["ezetimibe", "simvastatin"],
+      "effective_from": "2024-01-01",
+      "note": "依折麦布辛伐他汀片（复方）"
+    },
+    {
+      "product_name": "示例复方降脂胶囊",
+      "formula_version": 1,
+      "ingredient_ids": ["simvastatin"],
+      "effective_from": "2024-01-01",
+      "note": "初始配方（联调示例）"
+    },
+    {
+      "product_name": "示例复方降脂胶囊",
+      "formula_version": 2,
+      "ingredient_ids": ["simvastatin", "ezetimibe"],
+      "effective_from": "2026-06-01",
+      "note": "厂家换配方（联调示例）"
+    }
+  ],
+  "populations": [
+    { "population_id": "elderly", "label": "老年患者（≥65岁）" },
+    { "population_id": "hepatic", "label": "肝功能不全患者" },
+    { "population_id": "renal", "label": "肾功能不全患者" },
+    { "population_id": "polypharmacy", "label": "多重用药患者（≥5种）" },
+    { "population_id": "high-intake", "label": "长期大量食用西柚制品者" },
+    { "population_id": "adults", "label": "一般成年用药者" }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "component_id": "furanocoumarin",
+      "ingredient_id": "simvastatin",
+      "level": "HUMAN_PK",
+      "effect": "每日大量饮用西柚汁（约200mL以上）可显著升高辛伐他汀血药浓度，增加肌病风险",
+      "applicability": "主要适用于长期大量饮用西柚汁的口服给药情形；偶尔少量食用果肉的证据有限",
+      "literature": [
+        {
+          "ref_id": "L1",
+          "citation": "Lilja JJ 等：葡萄柚汁与辛伐他汀相互作用药动学研究（联调示例引文，发布前须核实）",
+          "verified": false
+        }
+      ],
+      "reviewed_by": "陈审校",
+      "reviewed_at": "2026-05-10T10:00:00+08:00",
+      "valid_until": "2027-06-30"
+    },
+    {
+      "evidence_id": "E2",
+      "component_id": "furanocoumarin",
+      "ingredient_id": "felodipine",
+      "level": "HUMAN_PK",
+      "effect": "西柚汁可明显升高非洛地平血药浓度，增强降压效应",
+      "applicability": "适用于口服非洛地平且饮用西柚汁的情形",
+      "literature": [
+        {
+          "ref_id": "L2",
+          "citation": "Bailey DG 等：葡萄柚汁与非洛地平相互作用研究（联调示例引文，发布前须核实）",
+          "verified": false
+        }
+      ],
+      "reviewed_by": "陈审校",
+      "reviewed_at": "2026-05-10T10:00:00+08:00",
+      "valid_until": "2027-06-30"
+    },
+    {
+      "evidence_id": "E3",
+      "component_id": "naringin",
+      "ingredient_id": "fexofenadine",
+      "level": "IN_VITRO",
+      "effect": "体外研究提示柚皮苷可抑制 OATP1A2 介导的转运，可能降低非索非那定吸收",
+      "applicability": "仅体外证据，人体临床意义尚不明确，不能作为个体停药依据",
+      "literature": [
+        {
+          "ref_id": "L3",
+          "citation": "柚皮苷对 OATP 转运体影响的体外研究（联调示例引文，发布前须核实）",
+          "verified": false
+        }
+      ],
+      "reviewed_by": "陈审校",
+      "reviewed_at": "2026-05-10T10:00:00+08:00",
+      "valid_until": "2026-12-31"
+    },
+    {
+      "evidence_id": "E4",
+      "component_id": "furanocoumarin",
+      "ingredient_id": "amlodipine",
+      "level": "HUMAN_PK",
+      "effect": "研究显示西柚汁对氨氯地平血药浓度影响较小",
+      "applicability": "基于单次饮用研究；长期大量饮用的影响尚不明确",
+      "literature": [
+        {
+          "ref_id": "L4",
+          "citation": "西柚汁与氨氯地平相互作用药动学研究（联调示例引文，发布前须核实）",
+          "verified": false
+        }
+      ],
+      "reviewed_by": "陈审校",
+      "reviewed_at": "2026-05-10T10:00:00+08:00",
+      "valid_until": "2027-06-30"
+    }
+  ],
+  "guidance": [
+    {
+      "guidance_id": "G1",
+      "kind": "MEDICATION_SAFETY",
+      "audience": "PATIENT",
+      "text": "服用辛伐他汀（如舒降之）期间，请避免大量饮用西柚（葡萄柚）汁或大量食用西柚果肉。西柚中的呋喃香豆素可抑制肠道代谢酶，使药物浓度升高、副作用风险增加。请勿自行停药或调整用药，如需调整请咨询医生或药师。",
+      "evidence_ids": ["E1"],
+      "population_ids": ["elderly", "hepatic", "high-intake"],
+      "reviewed_by": "李审核",
+      "approved_at": "2026-05-12T09:00:00+08:00",
+      "valid_until": "2027-06-30"
+    },
+    {
+      "guidance_id": "G2",
+      "kind": "MEDICATION_SAFETY",
+      "audience": "PATIENT",
+      "text": "服用非洛地平（如波依定）期间，请避免饮用西柚汁或食用西柚。西柚汁可明显升高血压药物浓度，可能引起头晕、面部潮红或低血压。请勿自行停药，如有疑问请咨询医生或药师。",
+      "evidence_ids": ["E2"],
+      "population_ids": ["elderly", "high-intake"],
+      "reviewed_by": "李审核",
+      "approved_at": "2026-05-12T09:00:00+08:00",
+      "valid_until": "2027-06-30"
+    },
+    {
+      "guidance_id": "G3",
+      "kind": "MEDICATION_SAFETY",
+      "audience": "PATIENT",
+      "text": "体外研究提示，柚子中的柚皮苷可能影响非索非那定（如阿特拉）的吸收，但人体证据有限、临床意义尚不确定。请勿自行停药；如长期大量食用柚子或其制品，请咨询医生或药师。",
+      "evidence_ids": ["E3"],
+      "population_ids": ["adults"],
+      "reviewed_by": "李审核",
+      "approved_at": "2026-05-12T09:00:00+08:00",
+      "valid_until": "2026-12-31"
+    },
+    {
+      "guidance_id": "G4",
+      "kind": "GENERAL_NUTRITION",
+      "audience": "PATIENT",
+      "text": "普通甜橙及其果汁一般不含呋喃香豆素，日常适量食用通常不影响经 CYP3A4 代谢的药物。本内容属于一般营养知识，不能替代针对个人用药情况的咨询。",
+      "exposure_ids": ["sweet-orange-juice", "sweet-orange-fresh"],
+      "reviewed_by": "李审核",
+      "approved_at": "2026-05-12T09:00:00+08:00",
+      "valid_until": "2027-06-30"
+    },
+    {
+      "guidance_id": "G5",
+      "kind": "MEDICATION_SAFETY",
+      "audience": "PATIENT",
+      "text": "服用氨氯地平（如络活喜）期间，偶尔饮用西柚汁对药物浓度影响较小；长期大量饮用的影响尚不明确，如有疑问请咨询医生或药师。",
+      "evidence_ids": ["E4"],
+      "population_ids": ["adults"],
+      "reviewed_by": "李审核",
+      "approved_at": "2026-05-12T09:00:00+08:00",
+      "valid_until": "2027-06-30"
+    }
+  ]
+}

@@ -22,6 +22,7 @@
         "INGREDIENT_MAPPED",
         "EVIDENCE_REVIEWED",
         "GUIDANCE_APPROVED",
+        "GUIDANCE_WITHDRAWN",
         "CHANNEL_UPDATED",
         "NOTICE_CORRECTED"
       ]
@@ -32,7 +33,9 @@
         "food_component",
         "medicine_ingredient",
         "evidence_statement",
-        "guidance_version"
+        "guidance_version",
+        "channel_publication",
+        "received_notice"
       ]
     },
     "aggregate_id": {

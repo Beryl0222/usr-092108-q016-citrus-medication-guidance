@@ -1,5 +1,5 @@
 [project]
 name = "citrus-medication-guidance"
 version = "0.1.0"
-description = "领域事件基础校验"
+description = "柑橘食药提示发布领域服务"
 requires-python = ">=3.11"
